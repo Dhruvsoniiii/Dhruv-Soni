@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark portfolio theme with golden accents */
+    --background: 30 8% 12%;
+    --foreground: 40 10% 96%;
+
+    --card: 30 8% 16%;
+    --card-foreground: 40 10% 96%;
+
+    --popover: 30 8% 16%;
+    --popover-foreground: 40 10% 96%;
+
+    --primary: 45 90% 60%;
+    --primary-foreground: 30 8% 12%;
+
+    --secondary: 30 8% 22%;
+    --secondary-foreground: 40 10% 96%;
+
+    --muted: 30 6% 25%;
+    --muted-foreground: 40 5% 65%;
+
+    --accent: 45 90% 60%;
+    --accent-foreground: 30 8% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 40 10% 96%;
+
+    --border: 30 8% 24%;
+    --input: 30 8% 24%;
+    --ring: 45 90% 60%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: radial-gradient(circle at top right, hsl(45 90% 60% / 0.15), transparent 50%);
+    --gradient-card: linear-gradient(135deg, hsl(30 8% 18%), hsl(30 8% 14%));
+    --glow-gold: 0 8px 32px hsl(45 90% 60% / 0.25);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
